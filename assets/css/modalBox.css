@@ -1,0 +1,751 @@
+/* ---------------- MODAL VIEW PRODUCT DETAIL --------------- */
+:root{
+    --main-color: #007bff;
+}
+
+.modal-bg{
+    display:none;
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+}
+
+.modal-bg.active{
+    display: block;
+}
+
+.modal-view-product{
+    display: none;
+    position: absolute;
+    z-index: 12;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:white;
+    width: 840px;
+    height: 480px;
+    border-radius: 10px;
+}
+
+.modal-view-product.active{
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        top: 10%;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modal-product-head {
+    /* padding:  */
+     padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: bold;
+    /* box-shadow: 1px solid rgba(0,0,0,); */
+}
+
+.modal-product-close{
+    padding: 5px 10px;
+    font-size: 22px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-product-close:hover{
+    color: red;
+}
+
+.modal-product-content {
+    padding: 0px 20px 20px 20px;
+}
+
+.modal-product-body {
+    display: flex;
+}
+
+img.modal-product-img {
+    width: 300px;
+}
+
+.modal-product-left{
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-product-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+span#modal-product-price {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.modal-product-system{
+    display: flex;
+    margin: 10px 0px;
+    color: var(--main-color);
+}
+
+.modal-product-system>div{
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.modal-product-description{
+    margin: 10px 0px;
+}
+
+.modal-product-ads{
+    margin: 5px 0px;
+}
+
+.modal-product-amout{
+    display: flex;
+    margin: 10px 0px;
+}
+
+.number-amout-item{
+    padding: 10px 15px;
+    color: var(--main-color);
+    margin: 0px 5px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+}
+
+.number-amout-item:hover{
+    background-color: var(--main-color);
+    color:white;
+}
+
+.product-amout-show{
+    width: 60px;
+    text-align: center;
+}
+
+.modal-product-buy{
+    display: flex;
+}
+
+.action-btn{
+    padding: 10px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.buy-now-btn{
+    background-color: #ffc107;
+}
+
+.buy-now-btn:hover{
+    background-color: #e0a800;
+}
+
+.add-to-card{
+    color: white;
+}
+
+.add-to-card:hover{
+    background-color: #0663c5;
+}
+
+.modal-product-ads1{
+    color: #007bff;
+}
+
+.modal-product-ads2{
+    color: #28a745;
+}
+
+.modal-product-ads3{
+    color: #dc3545;
+}
+
+/* ---------------- MODAL VIEW PRODUCT DETAIL --------------- */
+
+
+
+
+
+/* ---------------- MODAL LOGIN /SIGN UP --------------- */
+.modal-account{
+    display:none;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    width: 900px;
+    height: 500px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+.modal-account.active{
+    display: flex;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.modal-account-content{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.top-modal-account{
+    position: relative;
+}
+
+.close-btn{
+    position: absolute;
+    z-index: 20;
+    top: -250px;
+    left: 840px;
+    font-size: 18px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    color:red;
+}
+
+
+.modal-login{
+    width: 45%;
+    /* display: none; */
+    visibility: hidden;
+}
+
+.modal-login.active{
+    visibility: visible;
+}
+
+.login-head{
+    font-size: 22px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login-title{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.login-description{
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.login-box-item{
+    /* display: flex; */
+    width: 85%;
+    margin: 10px auto;
+    /* justify-content: center; */
+}
+
+.login-box-item input{
+    padding: 10px 15px;
+    width: 100%;
+    outline-color: var(--main-color);
+    border: 1px solid rgba(197, 191, 191, 0.836);
+    border-radius: 5px;
+    font-size:15px;
+}
+
+.login-box-item input::placeholder{
+    font-size: 15px;
+}
+
+.error-mess,
+.error-mess-sign-up{
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.error-mess.active,
+.error-mess-sign-up.active{
+    display: block;
+}
+
+.login-now{
+    background-color: var(--main-color);
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-now:hover{
+    background-color: #0653a5;
+}
+
+.login-more{
+    margin: 15px 0;
+}
+
+.login-with{
+    text-align: center;
+    position: relative;
+}
+
+.login-with::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    border-bottom: 1px solid rgb(156, 154, 154);
+    top: 50%;
+    left: 15%;
+}
+
+.login-with::before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    border-bottom: 1px solid rgb(156, 154, 154);
+    top: 50%;
+    right: 15%;
+}
+
+.login-icon-box{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.login-icon-item{
+    padding: 10px;
+    color: var(--main-color);
+    margin: 5px;
+    width: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--main-color);
+}
+
+.login-icon-item:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.modal-register{
+    width: 45%;
+    visibility: hidden;
+}
+
+.modal-register.active{
+    visibility: visible;
+}
+
+.register-head{
+    font-size: 22px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.register-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.register-box-item{
+    margin: 5px;
+    width: 47%;
+}
+
+.register-box-item:nth-child(1){
+    width: 98%;
+}
+
+.register-box-item input{
+    width: 98%;
+    padding: 10px 15px;
+    outline-color: var(--main-color);
+    border: 1px solid rgba(197, 191, 191, 0.836);
+    border-radius: 5px;
+    font-size:15px;
+}
+
+.modal-nofication{
+    /* display: none; */
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top:0;
+    left:0%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.modal-nofication.active{
+    left:50%;
+}
+
+.account-asked{
+    margin-top: 150px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.account-asked span{
+    color: white;
+    font-size: 20px;
+}
+
+.account-signup-description{
+    margin: 20px 0px;
+    font-style: italic;
+}
+
+.account-has-yet{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.account-has-yet::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid white;
+}
+
+.account-switch-btn{
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    padding: 10px;
+    width: 150px;
+    color: var(--main-color);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    height: 40px;
+}
+
+.account-switch-btn:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+.signup-show{
+    display: none;
+}
+
+.signup-show.active{
+    display: block;
+}
+
+.login-show{
+    display: none;
+}
+
+.login-show.active{
+    display: block;
+}
+
+
+/* ---------------- MODAL LOGIN /SIGN UP --------------- */
+
+
+/* ----------------- MODAL CART ------------------------ */
+.modal-cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    width: 400px;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+.modal-cart::-webkit-scrollbar{
+    display: none;
+}
+
+.modal-cart.active{
+    animation: showFromLeft 0.5S ease-in-out;
+    display: block;
+}
+
+@keyframes showFromLeft {
+    from{
+        right: -200px;
+        opacity: 0;
+    }
+    to{
+        right: 0;
+        opacity: 1;
+    }
+}
+
+.modal-cart-head {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+    align-items: center;
+}
+
+.modal-cart-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.modal-cart-close {
+    padding: 10px;
+    margin: 0 -10px;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-cart-close:hover{
+    color:red;
+}
+
+
+.modal-cart-item {
+    /* width: 100%; */
+    /* padding: 10px; */
+    margin: 15px;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-cart-item-head{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-cart-item-remove{
+    background-color: var(--main-color);
+    padding: 5px 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-cart-item-remove:hover{
+    background-color: red;
+    color:white;
+}
+
+.modal-cart-item-body{
+    display: flex;
+    padding: 5px 10px 15px 5px;
+}
+
+img.modal-cart-item-img {
+    width: 120px;
+}
+
+.modal-cart-right{
+    width:100%;
+    margin-left: 20px;
+}
+
+.modal-cart-item-title{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0px;
+    color: var(--main-color);
+}
+
+.modal-cart-item-counter{
+    display: flex;
+}
+
+.modal-cart-item-action{
+    padding: 4px;
+    background-color: var(--main-color);
+    margin: 0px 5px;
+    width: 30px;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-cart-item-subtract,
+.modal-cart-item-add{
+    color: var(--main-color);
+    background-color: white;
+    border: 1px solid var(--main-color);
+}
+
+.modal-cart-price{
+    padding: 15px 10px; 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-total-money{
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-money-title{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.total-money-number{
+    color: var(--main-color);
+    font-size: 17px;
+}
+
+.modal-cart-payment{
+    padding: 10px;
+    background-color: var(--main-color);
+    width: 85%;
+    margin: 10px auto;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+}
+
+.modal-cart-payment i{
+    margin-right: 10px;
+}
+
+.modal-cart-view-order{
+    background-color: white;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+/* ----------------- MODAL CART ------------------------ */
+
+
+/* ----------------- MODAL SWEET ALERT ----------------- */
+/* .wrapper-alert{
+    position: fixed;
+} */
+
+.modal-sweet-alert {
+    display: none;
+    background-color: #50cf94;
+    color: white;
+    width: 300px;
+    position: fixed;
+    height: 80px;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+    z-index: 20;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-sweet-alert.active{
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-sweet-alert.active .alert-timer-countdown{
+    animation: countingTime 4s linear;
+}
+
+@keyframes countingTime{
+    from {
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+
+span.alert-close {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+
+.alert-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-alert-icon {
+    margin: 15px;
+    font-size: 24px;
+}
+
+.alert-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.alert-description {
+    word-break: break-word;
+}
+
+.alert-timer-countdown{
+    background-color: rgba(255,255,255,0.5);
+    position:absolute;
+    height: 5px;
+    width: 0;
+    /* top: 100%; */
+    bottom: 0;
+    left: 0;
+    color: rgb(211, 109, 109);
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trang bán điện thoại DPHONE</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/modalBox.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <script src="https://kit.fontawesome.com/e0a7329a91.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <!-- Phần đầu trang -->
+        <div class="header">
+            <div class="wrap-header">
+                <div class="logo-contain">
+                    <div class="logo-bg">
+                    </div>
+                    <div class="logo-text">
+                        DPHONE
+                    </div>
+                </div>
+                <div class="header-main-nav">
+                    <div class="main-nav-item"><a href="introducePage.html" class="nav-link">Giới thiệu</a></div>
+                    <div class="main-nav-item"><a href="index.html" class="nav-link">Trang chủ</a></div>
+                    <div class="main-nav-item"><a href="contact.html" class="nav-link active">Liên hệ</a></div>
+                </div>
+                <div class="header-user-nav">
+                    <div class="none-login-nav active">
+                        <div class="login-item" id="nav-login-btn">Đăng nhập</div>
+                        <div class="login-item" id="nav-signup-btn">Đăng kí</div>
+                    </div>
+                    <div class="user-login-nav">
+                        <div class="show-cart-btn">
+                            Giỏ hàng
+                        </div>
+                        <div class="user-panel">
+                            <div class="user-panel-text">
+                                Xin chào, <span id="hello-user-name">duy 3908 </span><i
+                                    class="fas fa-caret-down fa-fw"></i>
+                            </div>
+                            <div class="user-dropdown-group">
+                                <div class="dropdown-item" onclick="redirectToOrderPage()">Xem đơn hàng</div>
+                                <div class="dropdown-item" id="logout-btn">Đăng xuất</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="wrap-title">
+                <div class="show-text">
+                    <i class="fas fa-percentage"></i>
+                    Ưu đã tết nguyên đán, sắm điện thoại ngay. Nhận nhiều ưu đãi hấp dẫn:
+                    1 Iphone 12 Pro Max, 1 TV Samsung QLED 50", 1000+ lì xì ngẫu nhiên
+                </div>
+            </div> -->
+        </div>
+        <!-- Phần đầu trang -->
+
+
+        <!-- Phần nội dung  -->
+        <div class="content">
+            <div class="content-head-bg">
+                <div class="contact-text">
+                    <div class="contact-title">
+                        Liên hệ với chúng tôi
+                    </div>
+                    <div class="contact-description">
+                        "Bạn có vấn đề về mua hàng hoặc muốn đặt hàng trước ?"
+                    </div>
+                </div>
+                <a href="#letSendMess"class="contact-btn">
+                    Liên hệ ngay
+                </a>
+                <div class="contact-hotline">
+                    <div class="hotline-text">
+                        HOTLINE
+                    </div>
+                    <div class="contact-hotline-box contact-phone">
+                        <div class="contact-phone-icon">
+                            <i class="fas fa-phone-square-alt"></i>
+                        </div>
+                        <div class="contact-phone-text">
+                            Phone: 0123456789
+                        </div>
+                    </div>
+                    <div class="contact-hotline-box contact-email">
+                        <div class="contact-email-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-email-text">
+                            Email: support@dphone.com
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="contact-service" id="letSendMess">
+                    <div class="contact-service-item">
+                        <div class="check-icon check-icon-online">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <div class="service-name">
+                            Hỗ trợ trực tuyến 24/7, luôn có người hỗ trợ
+                        </div>
+                    </div>
+                    <div class="contact-service-item">
+                        <div class="check-icon check-icon-headset">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="service-name">
+                            Phản hồi tích cực, chỉ trong 5 phút
+                        </div>
+                    </div>
+                    <div class="contact-service-item">
+                        <div class="check-icon check-icon-pro">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="service-name">
+                            Nhân viên tích cực, am hiểu chuyên sâu vấn đề
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-action" >
+                <div class="action-box-title" >
+                    Gửi tin nhắn cho chúng tôi
+                </div>
+                <div class="action-box">
+                    <div class="action-box-left">
+                        <img src="./assets/img/sendMess.svg" alt="">
+                    </div>
+                    <div class="action-box-right">
+                        <div class="wrap-box-mess">
+                            <div class="mess-title">
+                                Tin nhắn
+                            </div>
+                            <div class="mess-input">
+                                <i class="fas fa-user icon"></i>
+                                <input type="text" class="mess-input-data" placeholder="Tên của bạn">
+                            </div>
+                            <div class="mess-input">
+                                <i class="fas fa-phone-alt icon"></i>
+                                <input type="number" class="mess-input-data" placeholder="Số điện thoại của bạn">
+                            </div>
+                            <div class="mess-input">
+                                <i class="fas fa-envelope-open icon"></i>
+                                <input type="email" class="mess-input-data" placeholder="Email của bạn">
+                            </div>
+                            <div class="mess-input mess-send-text">
+                                <!-- <input type="text" > -->
+                                <!-- <i class="fas fa-comment-dots icon"></i> -->
+                                <textarea name="Text1" rows="5" class="mess-input-data mess-send-to-us" placeholder="Lời nhắn cho chúng tôi"></textarea>
+                            </div>
+                            <div class="mess-btn-submit">
+                                Gửi ngay <i class="fas fa-paper-plane fa-fw"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Phần nội dung -->
+
+        <!-- Phần chân trang -->
+        <div class="footer">
+            <div class="footer-left">
+                <div class="contact-group">
+                    <div class="contact-item contact-place">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                        </div>
+                        <div class="content-place-group">
+                            <div class="contact-address">
+                                123 Lý Thường Kiệt
+                            </div>
+                            <div class="contact-city">
+                                Quận 1, TPHCM
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contact-item contact-phone">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt fa-fw"></i>
+                        </div>
+                        <div class="phone-number">
+                            +84123456789
+                        </div>
+                    </div>
+                    <div class="contact-item contact-email">
+                        <div class="contact-icon">
+                            <i class="far fa-envelope"></i>
+                        </div>
+                        <div class="contact-admin-email">
+                            support@dphone.com
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-about-us">
+                    <div class="about-us-content">
+                        <div class="about-us-title">
+                            DPHONE.COM
+                        </div>
+                        <div class="about-us-description">
+                            Với một cái tên mới mẻ trong làng thương mại điện tử
+                            , DPHONE sẽ mang lại một trải nghiệm mới lạ cho khách hàng.
+                            Chúng tôi sẽ cố gắng hết sức mang lại cho bạn những sản
+                            phẩm tuyệt vời
+                        </div>
+                        <div class="about-us-social">
+                            <div class="fb-icon"></div>
+                            <div class="chplay-icon"></div>
+                            <div class="google-icon"></div>
+                            <div class="youtube-icon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-right-content">
+                    <div class="footer-menu-item"> <i class="fas fa-home"></i> Trang chủ</div>
+                    <div class="footer-menu-item"><i class="fas fa-info-circle"></i> Giới thiệu</div>
+                    <div class="footer-menu-item"><i class="fas fa-phone-square-alt"></i> Liên hệ</div>
+                </div>
+                <div class="footer-follow">
+                    Theo dõi chúng tôi tại
+                </div>
+                <div class="footer-icon">
+                    <div class="footer-icon-item"> <i class="fab fa-facebook"></i></div>
+                    <div class="footer-icon-item"><i class="fab fa-google-play"></i></div>
+                    <div class="footer-icon-item"><i class="fab fa-youtube"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            Copyright ©2021 All rights reserved | This websites is made with by HuyKhaDuy
+        </div>
+    </div>
+    <!-- Phần chân trang -->
+
+
+
+    <!-- Phần modalBox -->
+    <div class="modal">
+        <div class="modal-bg">
+            <!-- Modal View Products -->
+            <div class="modal-view-product ">
+                <div class="modal-product-head">
+                    <div class="modal-product-text">
+                        <i class="fas fa-info-circle"></i>
+                        Chi tiết sản phẩm
+                    </div>
+                    <div class="modal-product-close">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="modal-product-body">
+                    <div class="modal-product-left">
+                        <img src="https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg" alt=""
+                            class="modal-product-img">
+                    </div>
+                    <div class="modal-product-right">
+                        <div class="modal-product-content">
+                            <div class="modal-product-title">
+                                Xiaomi redmi note 7
+                            </div>
+                            <div class="modal-product-system">
+                                <div class="modal-product-ram">
+                                    Ram: <span id="modal-product-ram">3</span>GB
+                                </div>
+                                <div class="modal-product-rom">
+                                    Rom: <span id="modal-product-rom">64</span>GB
+                                </div>
+                            </div>
+                            <div class="modal-product-system">
+                                Giá: <span id="modal-product-price">5,400,000đ</span>
+                            </div>
+                            <div class="modal-product-description">
+                                <b>Mô tả:</b>
+                                <p>Sản phẩm này được cung cấp và phân phối chính hãng bởi
+                                    cửa hàng điện thoại DPHONE. Uy tín hàng đầu Việt Nam</p>
+                            </div>
+                            <div class="modal-product-detail">
+                                <div class="modal-product-ads modal-product-ads1">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    Giá cả phải chăng, sản phẩm chất lượng
+                                </div>
+                                <div class="modal-product-ads modal-product-ads2">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    Giao hàng nhanh chóng tận nơi trên toàn quốc
+                                </div>
+                                <div class="modal-product-ads modal-product-ads3">
+                                    <i class="fas fa-life-ring"></i>
+                                    Bảo hành 1 đổi 1 trong vòng 1 năm
+                                </div>
+                            </div>
+                            <div class="modal-product-amout">
+                                <div class="number-amout-item btn-subtract-amout">
+                                    <i class="fas fa-minus"></i>
+                                </div>
+                                <div class="number-amout-item product-amout-show">
+                                    <span id="modal-amout-product">1</span>
+                                </div>
+                                <div class="number-amout-item btn-add-amout">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="modal-product-buy">
+                                <div class="action-btn buy-now-btn">
+                                    Mua ngay
+                                </div>
+                                <div class="action-btn add-to-card">
+                                    Thêm vào giỏ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal View Products -->
+
+
+            <!-- Modal Login And Sign up -->
+            <div class="modal-account">
+                <div class="top-modal-account">
+                    <div class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="modal-account-content">
+                    <div class="modal-login active">
+                        <div class="modal-login-wrapper">
+                            <div class="login-head">
+                                Chào mừng trở lại DPHONE
+                            </div>
+                            <div class="login-title">
+                                Đăng nhập
+                            </div>
+                            <div class="login-description">
+                                Đăng nhập thành viên để mua hàng ngay
+                            </div>
+                            <div class="login-box">
+                                <div class="login-box-item login-box-username">
+                                    <input type="text" id="login-username" placeholder="Tên đăng nhập"
+                                        autocomplete="off">
+                                    <div class="error-mess error-username">Tên đăng nhập không tồn tại</div>
+                                </div>
+                                <div class="login-box-item login-box-password">
+                                    <input type="password" id="login-password" placeholder="Mật khẩu">
+                                    <div class="error-mess error-password">Mật khẩu không đúng</div>
+                                </div>
+                            </div>
+
+                            <div class="login-now" id="login-btn">
+                                Đăng nhập
+                            </div>
+                            <div class="login-more">
+                                <div class="login-with">
+                                    Hoặc đăng nhập với
+                                </div>
+                                <div class="login-icon-box">
+                                    <div class="login-icon-item"><i class="fab fa-google"></i></div>
+                                    <div class="login-icon-item"><i class="fab fa-facebook-f"></i></div>
+                                    <div class="login-icon-item"><i class="fab fa-apple"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-register">
+                        <div class="modal-register-wrapper">
+                            <div class="register-head">
+                                Chào mừng bạn mới DPHONE
+                            </div>
+                            <div class="login-title">
+                                Đăng kí
+                            </div>
+                            <div class="login-description">
+                                Đăng kí để mua hàng tại DPHONE ngay
+                            </div>
+                            <div class="register-box">
+                                <div class="register-box-item">
+                                    <input type="text" id="sign-name" placeholder="Họ tên" autocomplete="off">
+                                    <div class="error-mess-sign-up error-name">Tên không đúng địng dạng</div>
+                                </div>
+                                <div class="register-box-item">
+                                    <input type="text" id="sign-username" placeholder="Tên đăng nhập"
+                                        autocomplete="off">
+                                    <div class="error-mess-sign-up error-username">Tên đăng nhập quá ngắn</div>
+                                </div>
+                                <div class="register-box-item">
+                                    <input type="email" id="sign-email" placeholder="Email" autocomplete="off">
+                                    <div class="error-mess-sign-up error-email">Email không đúng định dạng</div>
+                                </div>
+                                <div class="register-box-item">
+                                    <input type="password" id="sign-pass" placeholder="Mật khẩu" autocomplete="off">
+                                    <div class="error-mess-sign-up error-pass">Mật khẩu quá ngắn</div>
+                                </div>
+                                <div class="register-box-item">
+                                    <input type="password" id="sign-repass" placeholder="Nhập lại mật khẩu"
+                                        autocomplete="off">
+                                    <div class="error-mess-sign-up error-pass">Mật khẩu không trùng khớp</div>
+                                </div>
+                            </div>
+                            <div class="register-now login-now" id="btn-register">
+                                Đăng kí
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-nofication active">
+                    <div class="modal-account-background">
+                        <div class="account-switch">
+                            <div class="signup-show">
+                                <div class="account-asked">
+                                    Hãy đăng kí tài khoản <span> DPHONE</span>
+                                </div>
+                                <div class="account-signup-description">
+                                    "Đăng kí chỉ 30 giây, săn quà liền tay"
+                                </div>
+                                <div class="account-has-yet">
+                                    Bạn đã có tài khoản ?
+                                </div>
+                                <div class="account-switch-btn login-switch-btn">
+                                    Đăng nhập
+                                </div>
+                            </div>
+                            <div class="login-show active">
+                                <div class="account-asked">
+                                    Đăng nhập ngay tài khoản <span> DPHONE</span>
+                                </div>
+                                <div class="account-signup-description">
+                                    "Mua hàng nhanh chóng, tiện lợi chỉ với 1 click"
+                                </div>
+                                <div class="account-has-yet">
+                                    Bạn chưa có tài khoản ?
+                                </div>
+                                <div class="account-switch-btn sign-up-switch-btn">
+                                    Đăng kí
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Phần modalBox -->
+
+
+            <!-- Phần Giỏ hàng -->
+            <div class="modal-cart">
+                <div class="modal-cart-wrapper">
+                    <div class="modal-cart-head">
+                        <div class="modal-cart-title">
+                            GIỎ HÀNG CỦA BẠN
+                        </div>
+                        <div class="modal-cart-close">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal-cart-container">
+                        <div class="modal-cart-item">
+                            <div class="modal-cart-item-head">
+                                <div class="modal-cart-item-remove">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                            <div class="modal-cart-item-body">
+                                <div class="modal-cart-left">
+                                    <img class="modal-cart-item-img"
+                                        src="https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg"
+                                        alt="">
+                                </div>
+                                <div class="modal-cart-right">
+                                    <div class="modal-cart-item-title">
+                                        Điện thoại Xiaomi note 7
+                                    </div>
+                                    <div class="modal-cart-item-counter">
+                                        <div class="modal-cart-item-action modal-cart-item-subtract"><i
+                                                class="fas fa-angle-left"></i></div>
+                                        <div class="modal-cart-item-action modal-cart-item-number">1</div>
+                                        <div class="modal-cart-item-action modal-cart-item-add"><i
+                                                class="fas fa-angle-right"></i></div>
+                                    </div>
+                                    <div class="modal-cart-price">
+                                        2,093,000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-total-money">
+                        <div class="total-money-title">Tổng tiền</div>
+                        <div class="total-money-number">2,093,000đ</div>
+                    </div>
+                    <div class="modal-cart-payment">
+                        <i class="far fa-credit-card"></i> Thanh toán
+                    </div>
+                    <div class="modal-cart-payment modal-cart-view-order">
+                        <i class="fas fa-shopping-cart"></i> Xem hóa đơn
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- Phần Giỏ hàng -->
+        </div>
+    </div>
+    <div class="wrapper-alert">
+        <!-- Phần Modal Alerts  -->
+        <div class="modal-sweet-alert">
+            <div class="alert-content">
+                <div class="left-alert-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="right-content">
+                    <div class="alert-title">
+                        Thêm thành công
+                    </div>
+                    <div class="alert-description">
+                        Sản phẩm đã được thêm vào túi của bạn
+                    </div>
+                </div>
+                <div class="alert-timer-countdown">
+                </div>
+            </div>
+            <span class="alert-close"><i class="fas fa-times-circle"></i></span>
+        </div>
+        <!-- Phần Modal Alerts  -->
+    </div>
+
+</body>
+<script src="./assets/js/class.js"></script>
+
+<script src="./assets/js/listPhoneData.js"></script>
+
+<script src="./assets/js/loadData.js"></script>
+
+<script src="./assets/js/loginModal.js"></script>
+
+<script src="./assets/js/modal.js"></script>
+
+<script src="./assets/js/eventClick.js"></script>
+
+</html>
